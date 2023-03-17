@@ -1,0 +1,230 @@
+:root{
+  --color_1: #514A9D;
+  --color_2: #24C6DC;
+  touch-action: pan-x pan-y;
+  height: 100%;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.page{
+  margin: auto;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, var(--color_1), var(--color_2)); 
+  justify-content: center;
+  align-items: center;
+}
+
+/*LOGIN_FORM*/
+
+
+.login_page::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("image/footer_bg.png");
+  background-size: cover;
+}
+
+.form{
+  padding: 20px;
+  display: flex;
+  width: 600px;
+  height: 420px;
+  background-color: #ffffff;
+  border: solid 2px var(--color_1);
+  border-radius: 30px;
+  align-items: center;
+}
+
+
+.form_photo{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo_image{
+  display: block;
+  width: 220px;
+  height: 220px;
+  background-color: #ffffff;
+  background-image: url("image/cics2.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  border-bottom-right-radius: 0;
+  border: 5px solid #2499dc;
+}
+
+.photo_image:hover{
+  cursor: grab;
+}
+
+
+.form_input{
+  display: flex;
+  position: relative;
+  padding: 10px;
+  padding-bottom: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #ffffffc2;
+  box-shadow: 0 0 100px white;
+  border-radius: 15px;
+  justify-content: center;
+}
+
+.input{
+  margin: 10px;
+  margin-left: 0;
+  padding: 10px;
+  padding-left: 22px;
+  width: 100%;
+  font-size: .7em;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  outline: 2px solid black;
+}
+
+.login_h{
+  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  font-size: 2.8em;
+  color: var(--color_2);
+  font-family: Arial;
+  text-shadow: -1px 1px 0 var(--color_1),
+                1px 1px 0 var(--color_1),
+                1px -1px 0 var(--color_1),
+               -1px -1px 0 var(--color_1);
+}
+
+
+.form_input span{
+  color: var(--color_1);
+  font-size: .4em;
+  text-shadow: none;
+}
+
+.input-label{
+  position: absolute;
+  transform: translate(35px, -36px);
+  font-size: 0.70em;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.788);
+  transform-origin: left;
+  transition: transform .25s;
+  background-color: transparent;
+}
+
+#uname:focus~.uname-label,
+#uname:valid~.uname-label{
+  transform: translate(25px, -58px) scale(.8);
+  color: rgb(4, 4, 80);
+  background-color: white;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#pass:focus~.pass-label,
+#pass:valid~.pass-label{
+  transform: translate(25px, -58px) scale(.8);
+  color: rgb(4, 4, 80);
+  background-color: white;
+  width: 70px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.input:is(:focus, :valid) {
+  outline-color: var(--color_1);
+}
+
+.btn_container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center ;
+}
+
+.signup_div{
+  margin-top: 3px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: .7em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.signup_div a{
+  color: var(--color_1);
+  transition: ease-in .2s;
+}
+.signup_div:hover{
+  font-size: .9em;
+}
+
+.submit_btn{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color:  var(--color_1);
+  color: #ffffff;
+  font-weight: bold;
+  outline: 2px solid var(--color_1);
+  border-radius: 50px;
+  letter-spacing: 1px;
+  transition: ease-in-out .4s;
+}
+
+.submit_btn:hover{
+  background-color: #ffffff;
+  color: var(--color_1);
+}
+
+.submit_btn:disabled{
+  background-color: #ffffff;
+  cursor: not-allowed;
+  outline: 2px solid #000000;
+  color: #000000c9;
+}
+
+.g-recaptcha{
+  transform:scale(0.7) translateX(-17px);
+  max-width: 100px;
+}
+
+@media (max-width:500px) {
+  .form{
+      padding: 50px 20px 70px 20px;
+      transform: scale(.9);
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+  }
+  .form_photo{
+    transform: scale(.7);
+    width: 100%;
+  }
+  .form_input{
+    width: 100%;
+  }
+}

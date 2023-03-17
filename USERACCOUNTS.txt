@@ -1,0 +1,23 @@
+> Make new database in phpMyAdmin. 
+Db name: cics
+
+Superadmin:
+UN: cics
+PW: cics123
+
+Treasurer/Org Admin:
+UN : access
+PW : access123
+
+(same with jpcs and intess)
+
+Student Account:
+Existing Accounts:
+UN: srcode
+PW: srcode+lastname
+
+EXAMPLE:
+20-02328
+20-02328Estrada
+
+(same with new registered account the combination default password is their srcode and lasname)

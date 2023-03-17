@@ -1,0 +1,34 @@
+#bill{
+    background: fixed;
+    background-color: rgb(6, 59, 106);
+}
+.details{
+ width: 5em;
+ padding: 20px;
+ height: 10em;
+}
+.details-2{
+    position:absolute;
+    transform: translate(18em,20px);
+}
+.imgdef{
+  width: 10em;
+}
+.student-form{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 5em;
+    background-color: red;
+}
+.student-form .imgdef{
+    height: 15em;
+    margin-left: 3em;
+    margin-top: 2em;
+}
+.student-form h5{
+    
+    top: -18em;
+    left: 24em;
+}
+
